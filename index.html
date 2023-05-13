@@ -17,9 +17,11 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,66 +33,20 @@ header {
 }
 
 .logo {
-   padding-top: 20px;
+   padding-top: 23px;
   font-size: 32px;
-    padding-left: 12px;
+    padding-left: 16px;
     padding-bottom: 2rem;
     width: 25%;
     color: #fff;
     cursor: pointer;
 }
 
-nav {
-  flex: 2;
-  
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}
-
-nav li {
-  margin: 0 10px;
-  
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.user-options {
-  flex: 1;
-  text-align: right;
-  font-size: 18px;
-}
-
-.user-options a {
-  color: #fff;
-  margin-left: 10px;
-  text-decoration: none;
-}
-.user-options a:hover{
-        transition: all 0.5s;
-        text-decoration: none;
-  text-shadow: 0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 30px #fff,
-               0 0 40px rgb(123, 129, 129),
-               0 0 70px rgb(117, 126, 126),
-               0 0 80px rgb(101, 104, 104),
-               0 0 100px rgb(127, 133, 133),
-               0 0 150px rgb(143, 155, 155);
-  animation: pop-up 1s ease-out forwards;
-  opacity: 0;
-}
 
 .menu-options {
   flex: 1;
   text-align: center;
-  margin-left: 6.5rem;
+  margin-right: 17rem;
   font-size: 18px;
 }
 
@@ -115,10 +71,6 @@ nav a {
   text-decoration: none;
 }
 
-.icon{
-  display: inline-block;
-  
-}
 
 @keyframes pop-up {
   from {
@@ -130,6 +82,15 @@ nav a {
   }
 }
 
+@keyframes slide-up {
+      0% {
+        transform: translateY(-4rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -137,7 +98,7 @@ nav a {
     grid-gap: 20px;
     max-width: 1200px;
     height: 500px;
-    margin: 1.5rem 2.5rem 2.5rem 8.5rem;
+    margin: 1.5rem 2.5rem 2.5rem 2.5rem;
     padding: 20px 20px 20px 20px;
     background-color: #1a1a1a;
     border-radius: 10px;
@@ -169,21 +130,6 @@ nav a {
     transform: translateY(-5px);
     box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
 }
-
-.card img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    opacity: 0.5;
-    transition: all 0.2s ease-in-out;
-}
-
 
 .card h3 {
     font-size: 24px;
@@ -219,6 +165,9 @@ nav a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-left: 15px; 
+    animation: slide-up 1s ease;
 }
 
 .footer {
@@ -230,7 +179,7 @@ nav a {
     align-items: center;
     height: 4rem;
     width: 100%;
-    margin: 0 0 0 0;
+    margin-top:auto;
     padding: 0;
     
 }.footer .p {
@@ -240,27 +189,19 @@ nav a {
 
 </style>
 <body>
-    <header>
+    <div class="header">
         <div class="logo">
             <h2>
-                e<span style="color: #808080;">Buy</span>.
+                e<span style="color: rgb(195, 187, 187);">Buy</span>.
               </h2>
         </div>
         <div class="menu-options">
             <a href="#">Home</a>
             <a href="#">Contact Us</a>
           </div>
-        <div class="user-options">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
-          <a href="#">Developers</a>
         </div>
-        <div class="icon">
-          <img style="padding:5px 0 0 5px; " src="dev.png"/>
-        </div>
-      </header>
       
-    <h1 class="radiant-text"> FEATURING</h1>
+    <h1 class="radiant-text">COMMUNITY</h1>
  
   <class class="container">
       <div class="card">
