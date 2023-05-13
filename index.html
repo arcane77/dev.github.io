@@ -22,7 +22,7 @@
     flex-direction: column;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,28 +43,6 @@ header {
     color: #fff;
     cursor: pointer;
 }
-
-nav {
-  flex: 2;
-  
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}
-
-nav li {
-  margin: 0 10px;
-  
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
 
 .menu-options {
   flex: 1;
@@ -213,7 +191,7 @@ padding:25px 30px 30px 30px;
 
 </style>
 <body>
-    <header>
+    <div class="header">
         <div class="logo">
             <h2>
                 <span style="color: rgb(195, 187, 187);">G</span><span style="color: #808080;">ECH</span>.
@@ -223,7 +201,7 @@ padding:25px 30px 30px 30px;
             <a href="#">Home</a>
             <a href="#">Contact Us</a>
           </div>
-      </header>
+        </div>
       <h1 class="radiant-text">DEVELOPERS</h1>
       <div class="container">
         <div class="card"> 
