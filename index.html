@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>developers</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+   width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+}
+
+.logo {
+   padding-top: 23px;
+  font-size: 32px;
+    padding-left: 16px;
+    padding-bottom: 2rem;
+    width: 25%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-options {
+  flex: 1;
+  text-align: center;
+  margin-right: 17rem;
+  font-size: 18px;
+}
+
+.menu-options a:hover{
+  transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.menu-options a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.radiant-text {
+    text-align: center;
+    font-size: 60px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    animation: slide-up 1s ease;
+    margin-bottom: 20px;
+    margin-left: 15px; ;
+}
+.container{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.card{
+    border-radius: 10px;
+    background-color: #292929;
+    width: 900px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    animation: slide-up 1s ease;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+}
+
+.p{
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  display: inline;
+  position: absolute;
+  padding-left: 30px;
+  padding-top: 10px;
+  line-height: 2px;
+  
+}
+
+.description{
+  display: block;
+    min-width: 600px;
+    padding: 20px 0px 20px 20px;
+}
+
+.btn0{
+    padding: 7px 40px 7px 40px;
+    background: linear-gradient(to right, #1c1c1c, #000000);
+    color: #fff;
+    border: none;
+    margin-right: 30px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    float: right;
+    
+}
+
+.btn0:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+}
+
+.btnBox {
+  width: 66%;
+  float: right;
+}
+.footer {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 104%;
+    margin-top:auto;
+    padding: 0;
+    
+    
+}.footer .p {
+      color: #fff;
+      text-decoration: none;
+    }
+    @keyframes pop-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+      0% {
+        transform: translateY(-4rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .img{
+padding:25px 30px 30px 30px;
+
+}
+
+
+</style>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h2>
+                <span style="color: rgb(195, 187, 187);">G</span><span style="color: #808080;">ECH</span>.
+              </h2>
+        </div>
+        <div class="menu-options">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+      <h1 class="radiant-text">DEVELOPERS</h1>
+      <div class="container">
+        <div class="card"> 
+            <div class="description">
+                <h2 style="margin-bottom: 10px;">NIKHIL GOWDA T P</h2>
+                 <p ><strong>YOP</strong>:2024</p>
+                 <p ><strong>Branch</strong>:Computer Science & Engineering </p>
+                 <p ><strong>Languages</strong>:Python</p>
+                 <p ><strong>Database</strong>:SQLAlchemy</p>
+                 <p ><strong>Frameworks</strong>:Flask</p>  
+           </div>
+           <div  class="btnBox"><button class="btn0">Contact</button></div>
+           </div>
+        <div class="card"> 
+        <div class="description">
+          <h2 style="margin-bottom: 10px;">ANJALI K S</h2>
+          <p ><strong>YOP</strong>:2024</p>
+          <p ><strong>Branch</strong>:Computer Science & Engineering </p>
+          <p ><strong>Scripting Languages</strong>:HTML5, JavaScript</p>
+          <p ><strong>StyleSheet</strong>:CSS3</p>
+       </div> 
+       <div  class="btnBox"><button class="btn0">Contact</button></div>
+    </div>
+    </div>
+      <div class="footer">
+        &copy; 2023 All Rights Reserved
+        </div>
+</body>
