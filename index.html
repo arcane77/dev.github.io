@@ -46,7 +46,7 @@
 
 .menu-options {
   text-align: center;
-  margin-right: 25rem;
+  margin-right: 16rem;
   font-size: 18px;
 }
 
@@ -102,16 +102,6 @@
 
 }
 
-@keyframes pop-up {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 @keyframes slide-up {
       0% {
         transform: translateY(-4rem);
@@ -132,6 +122,7 @@
     padding: 20px 20px 20px 20px;
     background-color: #1a1a1a;
     border-radius: 10px;
+    animation: slide-up 1s ease;
     box-shadow:  2.5px 1.2px 2.2px rgba(0, 0, 0, 0.188),
     6.1px 3px 5.3px rgba(0, 0, 0, 0.24),
     11.5px 5.6px 10px rgba(0, 0, 0, 0.279),
