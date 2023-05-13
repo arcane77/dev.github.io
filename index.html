@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>home</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+}
+
+.logo {
+   padding-top: 20px;
+  font-size: 32px;
+    padding-left: 12px;
+    padding-bottom: 2rem;
+    width: 25%;
+    color: #fff;
+    cursor: pointer;
+}
+
+nav {
+  flex: 2;
+  
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+nav li {
+  margin: 0 10px;
+  
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.user-options {
+  flex: 1;
+  text-align: right;
+  font-size: 18px;
+}
+
+.user-options a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.user-options a:hover{
+        transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.menu-options {
+  flex: 1;
+  text-align: center;
+  margin-left: 6.5rem;
+  font-size: 18px;
+}
+
+.menu-options a:hover{
+  transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.menu-options a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.icon{
+  display: inline-block;
+  
+}
+
+@keyframes pop-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    height: 500px;
+    margin: 1.5rem 2.5rem 2.5rem 8.5rem;
+    padding: 20px 20px 20px 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow:  2.5px 1.2px 2.2px rgba(0, 0, 0, 0.188),
+    6.1px 3px 5.3px rgba(0, 0, 0, 0.24),
+    11.5px 5.6px 10px rgba(0, 0, 0, 0.279),
+    20.5px 10.1px 17.9px rgba(0, 0, 0, 0.314),
+    38.4px 18.8px 33.4px rgba(0, 0, 0, 0.347),
+    92px 45px 80px rgba(0, 0, 0, 0.38);
+}
+
+.card {
+    background-color: #292929;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.card h3 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.card a {
+    color: #fff;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+}
+.radiant-text {
+    text-align: center;
+    font-size: 50px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    
+}.footer .p {
+      color: #fff;
+      text-decoration: none;
+    }
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <h2>
+                e<span style="color: #808080;">Buy</span>.
+              </h2>
+        </div>
+        <div class="menu-options">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+          </div>
+        <div class="user-options">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+          <a href="#">Developers</a>
+        </div>
+        <div class="icon">
+          <img style="padding:5px 0 0 5px; " src="dev.png"/>
+        </div>
+      </header>
+      
+    <h1 class="radiant-text"> FEATURING</h1>
+ 
+  <class class="container">
+      <div class="card">
+          <h3>Buy </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla</p>
+      </div>
+      <div class="card">
+          <h3>Sell</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla</p>
+      </div>
+      <div class="card">
+          <h3>CGPA calculator</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla</p>
+      </div>
+      <div class="card">
+          <h3>SGPA calculator</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla</p>
+      </div>
+      <div class="card">
+          <h3>Events</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla</p>
+      </div>
+      <div class="card">
+          <h3>Clubs</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla</p>
+      </div>
+      <div class="card">
+        <h3>Chatroom</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla</p>
+    </div>
+    <div class="card">
+      <h3>Alumni</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla</p>
+  </div>
+
+  </class>
+  <div class="footer">
+    &copy; 2023 All Rights Reserved
+    </div>
+  </body>
