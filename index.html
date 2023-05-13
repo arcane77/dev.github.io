@@ -5,6 +5,56 @@
   <title>club</title>
 </head>
 <style>
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+   width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+}
+
+.logo {
+   padding-top: 23px;
+  font-size: 32px;
+    padding-left: 16px;
+    padding-bottom: 2rem;
+    width: 25%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-options {
+  flex: 1;
+  text-align: center;
+  margin-right: 17rem;
+  font-size: 18px;
+}
+
+.menu-options a:hover{
+  transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.menu-options a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
   .format-container {
   width: 1342px;
   margin: 0 auto;
@@ -12,6 +62,8 @@
 
 body {
   background-color: #1a1a1a;
+  display: flex;
+    flex-direction: column;
 }
 .club_box {
   display: -webkit-box;
@@ -148,39 +200,6 @@ body {
   background-color: #4c49ea;
 }
 
-@media only screen and (max-width: 979px) {
-  .club_item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-    flex-basis: calc(50% - 30px);
-  }
-  .club-item_title {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .format-container {
-    width: 96%;
-  }
-}
-@media only screen and (max-width: 639px) {
-  .club_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
-  .club-item_title {
-    min-height: 72px;
-    line-height: 1;
-
-    font-size: 24px;
-  }
-  .club-item_link {
-    padding: 22px 40px;
-  }
-  .club-item_date-box {
-    font-size: 16px;
-  }
-}
 
 .btn0{
     padding: 7px 50px 7px 50px;
@@ -198,8 +217,56 @@ body {
     transform: translateY(-5px);
     box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
 }
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 104%;
+    margin-top:auto;
+    padding: 0;
+    
+    
+}.footer .p {
+      color: #fff;
+      text-decoration: none;
+    }
+    @keyframes pop-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+      0% {
+        transform: translateY(-4rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
 </style>
 <body>
+  <div class="header">
+    <div class="logo">
+        <h2>
+            <span style="color: rgb(195, 187, 187);">G</span><span style="color: #808080;">ECH</span>.
+          </h2>
+    </div>
+    <div class="menu-options">
+        <a href="#">Home</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
 <div class="format-container">
   <div class="club_box">
     <div class="club_item">
@@ -266,5 +333,8 @@ body {
     </div>
   </div>
 </div>
+<div class="footer">
+  &copy; 2023 All Rights Reserved
+  </div>
 </body>
 </html>
