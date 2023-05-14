@@ -40,7 +40,7 @@
     }
 
 
-        .container p {
+        .p {
            font-size: 28px;
            margin-top: 0;
            font-weight: 600;
@@ -51,28 +51,6 @@
           -webkit-text-fill-color: transparent;
           text-align: left;
        }
-	
-       .btn1 {
-    font-size: 20px;
-    background-color:  #1a1a1a;
-    border: 1px solid #777;
-    font-weight: 400;
-    padding: 13px 100px 13px 100px;
-    color: #ccc;
-    margin: 10px 5px 40px 590px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-.btn1:hover{
-    transition: all 0.5s;
-    transform: scale(1.1);
-    background-color: #000;
-    border: none;
-}
 
         .radiant-text {
             text-align: center;
@@ -88,7 +66,8 @@
       <h1 class="radiant-text"> CGPA</h1>
     </body>
 	<div class="container">
+    <div class="p">
         <p style="line-height: 1.5">CGPA:{{cgpa}}<br>
         Percentage:{{percentage}}</p>
+      </div>
     </div>
-    <button class="btn1">Download Result</button>
