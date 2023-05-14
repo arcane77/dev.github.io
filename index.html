@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
 
-	<title>sgpa</title>
+	<title>GPA</title>
 	<style>
-    *{
+        *{
         margin: 0;
+        padding: 0;
     }
-    body {
-    background-color: #1a1a1a;
+		body {
+      background-color: #1a1a1a;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-}
+		}
 
-.header {
+		.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  width: 100%;
+   width: 100%;
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
@@ -40,10 +41,10 @@
     cursor: pointer;
 }
 
-
 .menu-options {
+  flex: 1;
   text-align: center;
-  margin-right: 25.5rem;
+  margin-right: 17rem;
   font-size: 18px;
 }
 
@@ -67,27 +68,93 @@
   margin-left: 15px;
   text-decoration: none;
 }
+
 		.container {
-   		 display: block;
-  	 	 min-width: 600px;
-       max-height: 300px;
-    	 margin: 3rem 14rem 2.5rem 16rem;
+   		 display: flex;
+  	 	 width: 800px;
+    		margin: 0.5rem 4rem 2.5rem 4rem;
   	 	 padding: 20px 20px 20px 20px;
-    	 background-color: #1a1a1a;
-    	 border-radius: 10px;
-         box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
-         animation: slide-up 1s ease;
+    	background-color: #1a1a1a;
+    	border-radius: 10px;
+   		 box-shadow:  2.5px 1.2px 2.2px rgba(0, 0, 0, 0.188),
+   		 6.1px 3px 5.3px rgba(0, 0, 0, 0.24),
+  		  11.5px 5.6px 10px rgba(0, 0, 0, 0.279),
+  		  20.5px 10.1px 17.9px rgba(0, 0, 0, 0.314),
+   		 38.4px 18.8px 33.4px rgba(0, 0, 0, 0.347),
+   		 92px 45px 80px rgba(0, 0, 0, 0.38);
 		}
 
-        @keyframes slide-up {
-      0% {
-        transform: translateY(-5rem);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
+		.form {
+		    width: 500px;
+        max-width: 100%;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        
+		}
 
+		.inside{
+		  display: block;
+          font-size: 1rem;
+          font-weight: 200;
+          padding: 0.5rem;
+		  color: #eee;
+		  background-color: #1a1a1a;
+          margin: 1rem auto;
+          width: 150%;
+          border: 1px solid #777;
+          border-radius: 3px;
+          outline: none;
+		  cursor: pointer;
+		}
+
+	
+		.btn {
+        font-size: 20px;
+        background-color:  #000;
+        font-weight: 500;
+        padding: 17px 120px 17px 120px;
+        color: #ccc;
+        margin: 15px 5px 13px 30px;
+        border: 1px solid transparent;
+        border-radius: 9px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+	  .btn:hover{
+            transition: all 0.5s;
+            transform: scale(1.1);
+        }
+
+        .radiant-text {
+            text-align: center;
+            font-size: 72px;
+			margin-left: 3px;
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 104%;
+    margin-top:auto;
+    padding: 0;
+    
+    
+}.footer .p {
+      color: #fff;
+      text-decoration: none;
+    }
+        
     @keyframes pop-up {
   from {
     transform: translateY(100%);
@@ -97,67 +164,78 @@
     opacity: 1;
   }
 }
-
-.footer {
-    background-color: #000;
-    color: #fff;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    width: 104%;
-    margin-top:auto;
-    padding: 0;
-    
-}.footer .p {
-      color: #fff;
-      text-decoration: none;
-    }
-
-        .p {
-          min-width: 150px;
-           font-size: 28px;
-           margin-top: 0;
-           font-weight: 600;
-           margin-left: 9rem;
-           margin-bottom: 10px;
-           background: -webkit-linear-gradient(rgb(205, 198, 198), rgb(170, 167, 167));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          text-align: left;
-       }
-
-        .radiant-text {
-            text-align: center;
-            font-size: 72px;
-			      margin-left: 10px;
-            background: -webkit-linear-gradient(#eee, #333);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    
     </style>
     <body>
       <div class="header">
         <div class="logo">
             <h2>
-                G<span style="color: rgb(195, 187, 187);">ECH</span>.
+                <span style="color: rgb(195, 187, 187);">G</span><span style="color: #808080;">ECH</span>.
               </h2>
         </div>
         <div class="menu-options">
             <a href="#">Home</a>
             <a href="#">Contact Us</a>
           </div>
-      </div>
-      <h1 class="radiant-text"> SGPA</h1>
+        </div>
+      <h1 class="radiant-text"> CGPA</h1>
 	<div class="container">
-    <div class="p">
-        <p style="line-height: 1.5">SGPA: {{sgpa}}<br>
-        Percentage: {{percentage}}</p>
-      </div>
+	   <div class="form">
+              <input class="inside"
+                type="text"
+                name="user_sgpa"
+                placeholder="1st Semester SGPA"
+                required
+              />
+              
+              <input class="inside"
+                type="text"
+                name="user_sgpa"
+                placeholder="2nd Semester SGPA"
+                required
+              />
+              <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="3rd Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="4th Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="5th Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="6th Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="7th Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="8th Semester SGPA"
+                required
+              />
+			</div>
+		</div>
+	</div>
+	<div>
+		<button class="btn">Calculate CGPA</button>
+	</div>
+  <div class="footer">
+    &copy; 2023 All Rights Reserved
     </div>
-    <div class="footer">
-      &copy; 2023 All Rights Reserved
-      </div>
-    </body>
+  </body>
