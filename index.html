@@ -1,233 +1,258 @@
 <!DOCTYPE html>
-<html>
-
-	<title>GPA</title>
-	<style>
-        *{
-        margin: 0;
-        padding: 0;
-    }
-		body {
-      background-color: #1a1a1a;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-		}
-
-		.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-   width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin-bottom: 2rem;
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>events</title>
+</head>
+<style>
+  .format-container {
+  width: 1342px;
+  margin: 0 auto;
 }
 
-.logo {
-   padding-top: 23px;
-  font-size: 32px;
-    padding-left: 16px;
-    padding-bottom: 2rem;
-    width: 25%;
-    color: #fff;
-    cursor: pointer;
+body {
+  background-color: #1a1a1a;
 }
-
-.menu-options {
-  flex: 1;
-  text-align: center;
-  margin-right: 17rem;
-  font-size: 18px;
+.club_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: block;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
+.club_item {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+  margin: 40px ;
+  font-family: sans-serif;
+  overflow: hidden;
 
-.menu-options a:hover{
-  transition: all 0.5s;
-        text-decoration: none;
-  text-shadow: 0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 30px #fff,
-               0 0 40px rgb(123, 129, 129),
-               0 0 70px rgb(117, 126, 126),
-               0 0 80px rgb(101, 104, 104),
-               0 0 100px rgb(127, 133, 133),
-               0 0 150px rgb(143, 155, 155);
-  animation: pop-up 1s ease-out forwards;
-  opacity: 0;
+  border-radius: 28px;
 }
-
-.menu-options a {
-  color: #fff;
-  margin-left: 15px;
+.club-item_link {
+  display: block;
+  padding: 30px 20px;
+  background:  linear-gradient(90deg, #292940, #422536);
   text-decoration: none;
+  overflow: hidden;
+  position: relative;
+}
+.club-item_link:hover,
+.club-item_link:hover .club-item_date {
+  text-decoration: none;
+  color: #fff;
+}
+.club-item_link:hover,
+.club-item_link:hover .club-item_date1 {
+  text-decoration: none;
+  color: #fff;
+}
+.club-item_link:hover,
+.club-item_link:hover .club-item_date2 {
+  text-decoration: none;
+  color: #fff;
+}
+.club-item_link:hover .club-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.club-item_title {
+  min-height: 40px;
+  margin: 0 0 0px;
+  padding-top: 4px;
+  text-align: right;
+  overflow: hidden;
+
+  font-weight: 1000;
+  font-size: 50px;
+  color: #fff;
+  letter-spacing: 3px;
+  z-index: 2;
+  position: relative;
 }
 
-		.container {
-   		 display: flex;
-  	 	 width: 800px;
-    		margin: 0.5rem 4rem 2.5rem 4rem;
-  	 	 padding: 20px 20px 20px 20px;
-    	background-color: #1a1a1a;
-    	border-radius: 10px;
-   		 box-shadow:  2.5px 1.2px 2.2px rgba(0, 0, 0, 0.188),
-   		 6.1px 3px 5.3px rgba(0, 0, 0, 0.24),
-  		  11.5px 5.6px 10px rgba(0, 0, 0, 0.279),
-  		  20.5px 10.1px 17.9px rgba(0, 0, 0, 0.314),
-   		 38.4px 18.8px 33.4px rgba(0, 0, 0, 0.347),
-   		 92px 45px 80px rgba(0, 0, 0, 0.38);
-		}
+.club-item_date-box {
+  font-size: 20px;
+  color: #fff;
 
-		.form {
-		    width: 500px;
-        max-width: 100%;
-        margin-right: 2rem;
-        margin-bottom: 1rem;
-        
-		}
+  z-index: 2;
+  position: relative;
+}
+.club-item_date {
+  font-weight: bold;
+  color: rgb(181, 140, 173);
 
-		.inside{
-		  display: block;
-          font-size: 1rem;
-          font-weight: 200;
-          padding: 0.5rem;
-		  color: #eee;
-		  background-color: #1a1a1a;
-          margin: 1rem auto;
-          width: 150%;
-          border: 1px solid #777;
-          border-radius: 3px;
-          outline: none;
-		  cursor: pointer;
-		}
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
 
-	
-		.btn {
-        font-size: 20px;
-        background-color:  #000;
-        font-weight: 500;
-        padding: 17px 120px 17px 120px;
-        color: #ccc;
-        margin: 15px 5px 13px 30px;
-        border: 1px solid transparent;
-        border-radius: 9px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+.club-item_bg {
+  height: 128px;
+  width: 170px;
+  background: linear-gradient(90deg, #ff6b6b, #0000ff);
+  z-index: 1;
+  position: absolute;
+  top: -55px;
+  right: -85px;
 
-	  .btn:hover{
-            transition: all 0.5s;
-            transform: scale(1.1);
-        }
+  border-radius: 50%;
 
-        .radiant-text {
-            text-align: center;
-            font-size: 72px;
-			margin-left: 3px;
-            background: -webkit-linear-gradient(#eee, #333);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 
-        .footer {
-    background-color: #000;
+
+@media only screen and (max-width: 979px) {
+  .club_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .club-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .format-container {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .club_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .club-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .club-item_link {
+    padding: 22px 40px;
+  }
+  .club-item_date-box {
+    font-size: 16px;
+  }
+}
+
+a {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  margin-left: 36rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  
+}
+
+a span {
+  position: relative;
+  color: #fff;
+  font-size: 15px;
+  font-family: Arial;
+  letter-spacing: 8px;
+  z-index: 1;
+}
+
+a .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(90deg, #292940, #422536);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+a .liquid::after,
+a .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+a .liquid::before {
+  
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+a .liquid::after {
+  
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+
+a:hover .liquid{
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+.btn0{
+    padding: 7px 50px 7px 50px;
+    background: linear-gradient(90deg, #ff6b6b, #7474db);
     color: #fff;
-    font-size: 14px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    width: 104%;
-    margin-top:auto;
-    padding: 0;
-    
-    
-}.footer .p {
-      color: #fff;
-      text-decoration: none;
-    }
-        
-    
-    </style>
-    <body>
-      <div class="header">
-        <div class="logo">
-            <h2>
-                <span style="color: rgb(195, 187, 187);">G</span><span style="color: #808080;">ECH</span>.
-              </h2>
-        </div>
-        <div class="menu-options">
-            <a href="#">Home</a>
-            <a href="#">Contact Us</a>
+    border: none;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-radius: 7px;
+}
+
+.btn0:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+}
+</style>
+<body>
+    <div class="format-container">
+      <div class="club_box">
+        <div class="club_item">
+          <div class="club-item_link">
+            <div class="club-item_bg"></div>
+            <div class="club-item_title">{{ev.name}}</div>
+            <p style="color: #fff;text-align: left; margin-left:61rem; overflow:hidden; z-index:2; position: relative; font-size: 20px;">Description:{{ev.descp}}</p>
+            <p style="color: #fff; margin-left:61rem; overflow:hidden; z-index:2; position: relative; font-size: 20px;">Organising club: {{ev.club}}</p>
+            <button class="btn0">Enroll Now</button>
+            <div class="club-item_date-box">
+              Start date:
+              <span class="club-item_date">
+                04.11.2022
+              </span>
+            </div>
           </div>
         </div>
-      <h1 class="radiant-text"> CGPA</h1>
-	<div class="container">
-	   <div class="form">
-              <input class="inside"
-                type="text"
-                name="user_sgpa"
-                placeholder="1st Semester SGPA"
-                required
-              />
-              
-              <input class="inside"
-                type="text"
-                name="user_sgpa"
-                placeholder="2nd Semester SGPA"
-                required
-              />
-              <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="3rd Semester SGPA"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="4th Semester SGPA"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="5th Semester SGPA"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="6th Semester SGPA"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="7th Semester SGPA"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="8th Semester SGPA"
-                required
-              />
-			</div>
-		</div>
-	</div>
-	<div>
-		<button class="btn">Calculate CGPA</button>
-	</div>
-  <div class="footer">
-    &copy; 2023 All Rights Reserved
     </div>
-  </body>
+
+</div>    <a href="#">
+  <span>Upload</span>
+  <div class="liquid"></div>
+</a>
+</body>
+</html>
