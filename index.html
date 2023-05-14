@@ -187,7 +187,7 @@ body {
     <div class="chat-container">
         <div class="chat-header">
             <h1>Anonymous Chatroom</h1>
-            <h4>ask ur doubts ,share ur feedbacks  dw u will be anonymous</h2>
+            <h3>ask ur doubts ,share ur feedbacks  dw u will be anonymous</h2>
         </div>
         {% for message in messages %}
         <div class="message">
@@ -199,7 +199,7 @@ body {
     
     <form method="post" action="{{ url_for('chatroom') }}">
       <!--<input type="text" name="sender_name" placeholder="Your name">-->
-      <input style="width: 710px; margin:10px 0px 10px 7px;" type="text" name="message" placeholder="Type your message here">
+      <input style="width: 780px; margin:10px 0px 10px 7px;" type="text" name="message" placeholder="Type your message here">
       <input type="submit" value="Send">
         </div>
     </div>
