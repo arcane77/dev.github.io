@@ -8,6 +8,10 @@
   <title>chatroom</title>
 </head>
 <style>
+      *{
+        margin: 0;
+        padding: 0;
+    }
 body {
     background-color: #1a1a1a;
     color: #fff;
@@ -98,7 +102,7 @@ body {
     }
 
 .chat-container {
-    max-width: 800px;
+    width: 900px;
     margin: 50px auto;
     border: 1px solid rgb(11, 11, 11);
     background-color: #1a1a1a;
@@ -195,7 +199,7 @@ body {
     
     <form method="post" action="{{ url_for('chatroom') }}">
       <!--<input type="text" name="sender_name" placeholder="Your name">-->
-      <input style="width: 700px; margin:10px 0px 10px 7px;" type="text" name="message" placeholder="Type your message here">
+      <input style="width: 660px; margin:10px 0px 10px 7px;" type="text" name="message" placeholder="Type your message here">
       <input type="submit" value="Send">
         </div>
     </div>
