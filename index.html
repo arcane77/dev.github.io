@@ -48,14 +48,13 @@ body {
     cursor: pointer;
 }
 
-.menu-options {
-  flex: 1;
+ul {
 
   margin-right: 17rem;
   font-size: 18px;
 }
 
-.menu-options a:hover{
+li a:hover{
   transition: all 0.5s;
         text-decoration: none;
   text-shadow: 0 0 10px #fff,
@@ -70,8 +69,8 @@ body {
   opacity: 0;
 }
 
-.menu-options a {
-  display: flex;
+li a {
+  display: block;
   text-align: center;
   color: #fff;
   margin-left: 15px;
@@ -319,10 +318,10 @@ a:hover .liquid{
             <span style="color: rgb(195, 187, 187);">G</span><span style="color: #808080;">ECH</span>.
           </h2>
     </div>
-    <div class="menu-options">
-        <a href="#">Home</a><br>
-        <a href="#">Contact Us</a>
-      </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
     </div>
     <div class="format-container">
       <div class="club_box">
