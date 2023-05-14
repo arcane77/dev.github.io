@@ -2,24 +2,19 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>events</title>
+  <title>home</title>
 </head>
 <style>
-  .format-container {
-  width: 1342px;
-  margin: 0 auto;
-}
-
-*{
-  margin: 0;
-}
-
-body {
-  background-color: #1a1a1a;
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+    background-color: #1a1a1a;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -31,7 +26,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-   width: 1700px;
+  width: 100%;
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
@@ -41,17 +36,17 @@ body {
 .logo {
    padding-top: 23px;
   font-size: 32px;
-    padding-left: 24rem;
+    padding-left: 16px;
     padding-bottom: 2rem;
     width: 25%;
     color: #fff;
     cursor: pointer;
 }
 
+
 .menu-options {
-  flex: 1;
   text-align: center;
-  margin-right: 25rem;
+  margin-left: 10rem;
   font-size: 18px;
 }
 
@@ -76,98 +71,135 @@ body {
   text-decoration: none;
 }
 
-.club_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: block;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-.club_item {
-  -ms-flex-preferred-size: calc(33.33333% - 30px);
-  flex-basis: calc(33.33333% - 30px);
-  margin: 40px ;
-  font-family: sans-serif;
-  overflow: hidden;
-
-  border-radius: 28px;
-}
-.club-item_link {
-  display: block;
-  padding: 30px 20px;
-  background:  linear-gradient(90deg, #292940, #422536);
-  text-decoration: none;
-  overflow: hidden;
-  position: relative;
-}
-.club-item_link:hover,
-.club-item_link:hover .club-item_date {
-  text-decoration: none;
-  color: #fff;
-}
-.club-item_link:hover,
-.club-item_link:hover .club-item_date1 {
-  text-decoration: none;
-  color: #fff;
-}
-.club-item_link:hover,
-.club-item_link:hover .club-item_date2 {
-  text-decoration: none;
-  color: #fff;
-}
-.club-item_link:hover .club-item_bg {
-  -webkit-transform: scale(10);
-  -ms-transform: scale(10);
-  transform: scale(10);
-}
-.club-item_title {
-  min-height: 40px;
-  margin: 0 0 0px;
-  padding-top: 4px;
+.user-options {
+  flex: 1;
   text-align: right;
-  overflow: hidden;
+  font-size: 18px;
+}
 
-  font-weight: 1000;
-  font-size: 50px;
+.user-options a {
   color: #fff;
-  letter-spacing: 3px;
-  z-index: 2;
-  position: relative;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.user-options a:hover{
+        transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
 }
 
-.club-item_date-box {
-  font-size: 20px;
-  color: #fff;
+.icon{
+  display: inline-block;
 
-  z-index: 2;
-  position: relative;
-}
-.club-item_date {
-  font-weight: bold;
-  color: rgb(181, 140, 173);
-
-  -webkit-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  transition: color 0.5s ease;
 }
 
-.club-item_bg {
-  height: 128px;
-  width: 170px;
-  background: linear-gradient(90deg, #ff6b6b, #0000ff);
-  z-index: 1;
-  position: absolute;
-  top: -55px;
-  right: -85px;
+@keyframes slide-up {
+      0% {
+        transform: translateY(-4rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
 
-  border-radius: 50%;
+    @keyframes pop-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    height: 600px;
+    margin: 1.5rem 4.5rem 2.5rem 4rem;
+    padding: 20px 20px 20px 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    animation: slide-up 1s ease;
+    box-shadow:  2.5px 1.2px 2.2px rgba(0, 0, 0, 0.188),
+    6.1px 3px 5.3px rgba(0, 0, 0, 0.24),
+    11.5px 5.6px 10px rgba(0, 0, 0, 0.279),
+    20.5px 10.1px 17.9px rgba(0, 0, 0, 0.314),
+    38.4px 18.8px 33.4px rgba(0, 0, 0, 0.347),
+    92px 45px 80px rgba(0, 0, 0, 0.38);
+}
+
+.card {
+    background-color: #292929;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.card a {
+    color: #fff;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+}
+.radiant-text {
+    text-align: center;
+    font-size: 50px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-left: 15px; 
+    animation: slide-up 1s ease;
 }
 
 .footer {
@@ -178,175 +210,73 @@ body {
     justify-content: center;
     align-items: center;
     height: 4rem;
-    width: 1750px;
+    width: 104%;
     margin-top:auto;
     padding: 0;
-    }
-
-    .footer .p {
+    
+}.footer .p {
       color: #fff;
       text-decoration: none;
     }
 
-@media only screen and (max-width: 979px) {
-  .club_item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-    flex-basis: calc(50% - 30px);
-  }
-  .club-item_title {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .format-container {
-    width: 96%;
-  }
-}
-@media only screen and (max-width: 639px) {
-  .club_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
-  .club-item_title {
-    min-height: 72px;
-    line-height: 1;
-
-    font-size: 24px;
-  }
-  .club-item_link {
-    padding: 22px 40px;
-  }
-  .club-item_date-box {
-    font-size: 16px;
-  }
-}
-
-.ubtn a {
-  position: relative;
-  padding: 20px 50px;
-  display: block;
-  margin-left: 32rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 200px;
-  overflow: hidden;
-  
-}
-
-a span {
-  position: relative;
-  color: #fff;
-  font-size: 15px;
-  font-family: Arial;
-  letter-spacing: 8px;
-  z-index: 1;
-}
-
-a .liquid {
-  position: absolute;
-  top: -80px;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(90deg, #292940, #422536);
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
-  transition: .5s;
-}
-
-a .liquid::after,
-a .liquid::before {
-  content: '';
-  width: 200%;
-  height: 200%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -75%);
-  background: #000;
-}
-
-a .liquid::before {
-  
-  border-radius: 45%;
-  background: rgba(20, 20, 20, 1);
-  animation: animate 5s linear infinite;
-}
-
-a .liquid::after {
-  
-  border-radius: 40%;
-  background: rgba(20, 20, 20, .5);
-  animation: animate 10s linear infinite;
-}
-
-a:hover .liquid{
-  top: -120px;
-}
-
-@keyframes animate {
-  0% {
-    transform: translate(-50%, -75%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -75%) rotate(360deg);
-  }
-}
-
-.btn0{
-    padding: 7px 50px 7px 50px;
-    background: linear-gradient(90deg, #ff6b6b, #7474db);
-    color: #fff;
-    border: none;
-    margin-bottom: 15px;
-    margin-left: 4px;
-    letter-spacing: 1px;
-    font-size: 15px;
-    border-radius: 7px;
-}
-
-.btn0:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
-}
 </style>
 <body>
-  <div class="header">
-    <div class="logo">
-        <h2>
-            <span style="color: rgb(195, 187, 187);">G</span><span style="color: #808080;">ECH</span>.
-          </h2>
-    </div>
-    <div class="menu-options">
-        <a href="#">Home</a>
-        <a href="#">Contact Us</a>
-      </div>
-    </div>
-    <div class="format-container">
-      <div class="club_box">
-        <div class="club_item">
-          <div class="club-item_link">
-            <div class="club-item_bg"></div>
-            <div class="club-item_title">{{ev.name}}</div>
-            <p style="color: #fff;text-align: left; margin-left:61rem; overflow:hidden; z-index:2; position: relative; font-size: 20px;">Description:{{ev.descp}}</p>
-            <p style="color: #fff; margin-left:61rem; overflow:hidden; z-index:2; position: relative; font-size: 20px;">Organising club: {{ev.club}}</p>
-            <button class="btn0">Enroll Now</button>
-            <div class="club-item_date-box">
-              Start date:
-              <span class="club-item_date">
-                04.11.2022
-              </span>
-            </div>
-          </div>
+    <div class="header">
+        <div class="logo">
+            <h2>
+                G<span style="color: rgb(195, 187, 187);">ECH</span>.
+              </h2>
         </div>
+        <div class="menu-options">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <div class="user-options">
+            <a href="#">Developers</a>
+          </div>
+          <div class="icon">
+            <img style="padding:5px 0 0 5px; " src="dev.png"/>
+          </div>
+      </div>
+      
+    <h1 class="radiant-text">COMMUNITY</h1>
+ 
+  <class class="container">
+      <div class="card">
+          <h3>Buy </h3>
+          <p>students can buy study materials from other students</p>
+      </div>
+      <div class="card">
+          <h3>Sell</h3>
+          <p>students can sell their study materials to other students</p>
+      </div>
+      <div class="card">
+          <h3>CGPA calculator</h3>
+          <p>calculate your CGPA</p>
+      </div>
+      <div class="card">
+          <h3>SGPA calculator</h3>
+          <p>calculate your semester SGPA</p>
+      </div>
+      <div class="card">
+          <h3>Events</h3>
+          <p>participate in college events/fests</p>
+      </div>
+      <div class="card">
+          <h3>Clubs</h3>
+          <p>enroll to college clubs</p>
+      </div>
+      <div class="card">
+        <h3>Chatroom</h3>
+        <p>annonymous chatroom</p>
     </div>
-
-</div>    <div class="ubtn"><a href="#">
-  <span>Upload</span>
-  <div class="liquid"></div>
-</a></div>
-<div class="footer">
-  <p style="margin-left: 22rem; ">&copy; 2023 All Rights Reserved</p>
+    <div class="card">
+      <h3>Alumni</h3>
+      <p>get in touch with college alumni</p>
   </div>
-</body>
-</html>
+
+  </class>
+  <div class="footer">
+    &copy; 2023 All Rights Reserved
+    </div>
+  </body>
