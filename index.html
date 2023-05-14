@@ -1,241 +1,112 @@
+
+
+
 <!DOCTYPE html>
-<html>
-
-	<title>GPA</title>
-	<style>
-        *{
-        margin: 0;
-        padding: 0;
-    }
-		body {
-      background-color: #1a1a1a;
-    color: #fff;
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>chatroom</title>
+</head>
+<style>
+    body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-		}
-
-		.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-   width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin-bottom: 2rem;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
 }
 
-.logo {
-   padding-top: 23px;
-  font-size: 32px;
-    padding-left: 16px;
-    padding-bottom: 2rem;
-    width: 25%;
+.chat-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    border: 1px solid rgb(11, 11, 11);
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+    text-align: center;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    border: none;
+}
+
+.chat-header h1 {
+    margin: 0;
+}
+
+.chat-messages {
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 10px;
+    color:#fff
+    border: none;
+    background-color: #1a1a1a;
+    border-radius: 0 0 5px 5px;
+}
+
+.chat-messages .message {
+    background-color: rgb(12, 12, 12);
     color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 2px solid rgb(12, 12, 12);
+    background-color: #1a1a1a;
+}
+.content {
+    color: white;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: rgb(12, 12, 12);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.menu-options {
-  flex: 1;
-  text-align: center;
-  margin-right: 17rem;
-  font-size: 18px;
-}
-
-.menu-options a:hover{
-  transition: all 0.5s;
-        text-decoration: none;
-  text-shadow: 0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 30px #fff,
-               0 0 40px rgb(123, 129, 129),
-               0 0 70px rgb(117, 126, 126),
-               0 0 80px rgb(101, 104, 104),
-               0 0 100px rgb(127, 133, 133),
-               0 0 150px rgb(143, 155, 155);
-  animation: pop-up 1s ease-out forwards;
-  opacity: 0;
-}
-
-.menu-options a {
-  color: #fff;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
-		.container {
-   		 display: flex;
-  	 	 width: 800px;
-    		margin: 0.5rem 4rem 2.5rem 4rem;
-  	 	 padding: 20px 20px 20px 20px;
-    	background-color: #1a1a1a;
-    	border-radius: 10px;
-   		 box-shadow:  2.5px 1.2px 2.2px rgba(0, 0, 0, 0.188),
-   		 6.1px 3px 5.3px rgba(0, 0, 0, 0.24),
-  		  11.5px 5.6px 10px rgba(0, 0, 0, 0.279),
-  		  20.5px 10.1px 17.9px rgba(0, 0, 0, 0.314),
-   		 38.4px 18.8px 33.4px rgba(0, 0, 0, 0.347),
-   		 92px 45px 80px rgba(0, 0, 0, 0.38);
-		}
-
-		.form {
-		    width: 500px;
-        max-width: 100%;
-        margin-right: 2rem;
-        margin-bottom: 1rem;
-        
-		}
-
-		.inside{
-		  display: block;
-          font-size: 1rem;
-          font-weight: 200;
-          padding: 0.5rem;
-		  color: #eee;
-		  background-color: #1a1a1a;
-          margin: 1rem auto;
-          width: 150%;
-          border: 1px solid #777;
-          border-radius: 3px;
-          outline: none;
-		  cursor: pointer;
-		}
-
-	
-		.btn {
-        font-size: 20px;
-        background-color:  #000;
-        font-weight: 500;
-        padding: 17px 120px 17px 120px;
-        color: #ccc;
-        margin: 15px 5px 13px 30px;
-        border: 1px solid transparent;
-        border-radius: 9px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-	  .btn:hover{
-            transition: all 0.5s;
-            transform: scale(1.1);
-        }
-
-        .radiant-text {
-            text-align: center;
-            font-size: 72px;
-			margin-left: 3px;
-            background: -webkit-linear-gradient(#eee, #333);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .footer {
-    background-color: #000;
-    color: #fff;
-    font-size: 14px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    width: 104%;
-    margin-top:auto;
-    padding: 0;
-    
-    
-}.footer .p {
-      color: #fff;
-      text-decoration: none;
-    }
-        
-    @keyframes pop-up {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-    </style>
-    <body>
-      <div class="header">
-        <div class="logo">
-            <h2>
-                <span style="color: rgb(195, 187, 187);">G</span><span style="color: #808080;">ECH</span>.
-              </h2>
+</style>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Anonymous Chatroom</h1>
+            <h2>ask ur doubts ,share ur feedbacks  dw u will be anonymous</h2>
         </div>
-        <div class="menu-options">
-            <a href="#">Home</a>
-            <a href="#">Contact Us</a>
-          </div>
+        {% for message in messages %}
+        <div class="message">
+          <span class="sender">{{ message.sender_name }}</span>
+          <span class="timestamp">{{ message.timestamp }}</span>
+          <p class="content">{{ message.message }}</p>
         </div>
-      <h1 class="radiant-text">SGPA</h1>
-	<div class="container">
-	   <div class="form">
-              <input class="inside"
-                type="text"
-                name="user_sgpa"
-                placeholder="Subject 1 marks"
-                required
-              />
-              
-              <input class="inside"
-                type="text"
-                name="user_sgpa"
-                placeholder="Subject 2 marks"
-                required
-              />
-              <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="Subject 3 marks"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="Subject 4 marks"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="Subject 5 marks"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="Subject 6 marks"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="Subject 7 marks"
-                required
-              />
-			  <input class="inside"
-                type="text"
-                name="subject"
-                placeholder="Subject 8 marks"
-                required
-              />
-			</div>
-		</div>
-	</div>
-	<div>
-		<button class="btn">Calculate SGPA</button>
-	</div>
-  <div class="footer">
-    &copy; 2023 All Rights Reserved
+      {% endfor %}
+    
+    <form method="post" action="{{ url_for('chatroom') }}">
+      <!--<input type="text" name="sender_name" placeholder="Your name">-->
+      <input type="text" name="message" placeholder="Type your message here">
+      <input type="submit" value="Send">
+        </div>
     </div>
-  </body>
+</body>
+</html>
+
+
