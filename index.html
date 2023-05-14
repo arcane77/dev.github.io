@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<title>GPA</title>
+	<style>
+		body {
+			background-color: #1a1a1a;
+			color: #fff;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		
+		.container {
+   		 display: flex;
+  	 	 max-width: 1000px;
+    		margin: 0.5rem 15rem 2.5rem 15rem;
+  	 	 padding: 20px 20px 20px 20px;
+    	background-color: #1a1a1a;
+    	border-radius: 10px;
+   		 box-shadow:  2.5px 1.2px 2.2px rgba(0, 0, 0, 0.188),
+   		 6.1px 3px 5.3px rgba(0, 0, 0, 0.24),
+  		  11.5px 5.6px 10px rgba(0, 0, 0, 0.279),
+  		  20.5px 10.1px 17.9px rgba(0, 0, 0, 0.314),
+   		 38.4px 18.8px 33.4px rgba(0, 0, 0, 0.347),
+   		 92px 45px 80px rgba(0, 0, 0, 0.38);
+		}
+
+		.form {
+		width: 500px;
+        max-width: 100%;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        
+		}
+
+		.inside{
+		  display: block;
+          font-size: 1rem;
+          font-weight: 200;
+          padding: 0.5rem;
+		  color: #eee;
+		  background-color: #1a1a1a;
+          margin: 1rem auto;
+          width: 190%;
+          border: 1px solid #777;
+          border-radius: 3px;
+          outline: none;
+		  cursor: pointer;
+		}
+
+	
+		.btn {
+        font-size: 20px;
+        background-color:  #000;
+        font-weight: 500;
+        padding: 17px 270px 17px 270px;
+        color: #ccc;
+        margin: 10px 5px 13px 425px;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+	  .btn:hover{
+            transition: all 0.5s;
+            transform: scale(1.1);
+        }
+
+        .radiant-text {
+            text-align: center;
+            font-size: 72px;
+			margin-bottom: 2px;
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+    
+    </style>
+    <body>
+      <h1 class="radiant-text"> CGPA</h1>
+    </body>
+	<div class="container">
+	   <div class="form">
+              <input class="inside"
+                type="text"
+                name="user_sgpa"
+                placeholder="1st Semester SGPA"
+                required
+              />
+              
+              <input class="inside"
+                type="text"
+                name="user_sgpa"
+                placeholder="2nd Semester SGPA"
+                required
+              />
+              <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="3rd Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="4th Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="5th Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="6th Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="7th Semester SGPA"
+                required
+              />
+			  <input class="inside"
+                type="text"
+                name="subject"
+                placeholder="8th Semester SGPA"
+                required
+              />
+			</div>
+		</div>
+	</div>
+	<div>
+		<button class="btn">Calculate CGPA</button>
+		<button class="btn">Download Result</button>
+	</div>
