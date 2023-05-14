@@ -15,11 +15,11 @@
 }
 
 body {
-  background-color: #1a1a1a;
+    background-color: #1a1a1a;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -31,7 +31,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-   width: 1700px;
+  width: 100%;
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
@@ -41,24 +41,21 @@ body {
 .logo {
    padding-top: 23px;
   font-size: 32px;
-    padding-left: 24rem;
+    padding-left: 16px;
     padding-bottom: 2rem;
     width: 25%;
     color: #fff;
     cursor: pointer;
 }
 
-ul {
 
-  margin-right: 17rem;
+.menu-options {
+  text-align: center;
+  margin-left: 10rem;
   font-size: 18px;
-  text-decoration: none;
-}
-li{
-  display: inline;
 }
 
-li a:hover{
+.menu-options a:hover{
   transition: all 0.5s;
         text-decoration: none;
   text-shadow: 0 0 10px #fff,
@@ -73,12 +70,36 @@ li a:hover{
   opacity: 0;
 }
 
-li a {
-  display: block;
-  text-align: center;
+.menu-options a {
   color: #fff;
   margin-left: 15px;
   text-decoration: none;
+}
+
+.user-options {
+  flex: 1;
+  text-align: right;
+  font-size: 18px;
+}
+
+.user-options a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.user-options a:hover{
+        transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
 }
 
 .club_box {
@@ -319,14 +340,13 @@ a:hover .liquid{
   <div class="header">
     <div class="logo">
         <h2>
-            <span style="color: rgb(195, 187, 187);">G</span><span style="color: #808080;">ECH</span>.
+            G<span style="color: rgb(195, 187, 187);">ECH</span>.
           </h2>
     </div>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
+    <div class="menu-options">
+        <a href="#">Home</a>
+        <a href="#">Contact Us</a>
+      </div>
     <div class="format-container">
       <div class="club_box">
         <div class="club_item">
