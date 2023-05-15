@@ -2,382 +2,81 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>developers</title>
+  <title>buy</title>
 </head>
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    body {
-    background-color: #1a1a1a;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+
+
+body {
+  background-color: #1a1a1a;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin-bottom: 2rem;
-}
-
-.logo {
-   padding-top: 20px;
-  font-size: 32px;
-    padding-left: 12px;
-    padding-bottom: 2rem;
-    width: 25%;
-    color: #fff;
-    cursor: pointer;
-}
-
-.menu-options {
-  flex: 1;
-  text-align: center;
-  margin-left: 6rem;
-  font-size: 18px;
-}
-
-.menu-options a:hover{
-  transition: all 0.5s;
-        text-decoration: none;
-  text-shadow: 0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 30px #fff,
-               0 0 40px rgb(123, 129, 129),
-               0 0 70px rgb(117, 126, 126),
-               0 0 80px rgb(101, 104, 104),
-               0 0 100px rgb(127, 133, 133),
-               0 0 150px rgb(143, 155, 155);
-  animation: pop-up 1s ease-out forwards;
-  opacity: 0;
-}
-
-.menu-options a {
-  color: #fff;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
-.radiant-text {
-    text-align: center;
-    font-size: 60px;
-    background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 2px;
-    animation: slide-up 1s ease;
-    margin-bottom: 20px;
-}
-.container{
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-}
-
-.card{
+.buy-card{
+    margin: 40px 40px 40px 40px ;
     border-radius: 10px;
     background-color: #292929;
-    width: 1100px;
-    height: 210px;
-    display: flex;
-    align-items: center;
-    animation: slide-up 1s ease;
-    margin-bottom: 30px;
+    width: 400px;
+    height: 440px;
+    display: inline-block;
 }
 
-.card:hover {
+.buy-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+}
+
+.img{
+padding-top: 50px;
+padding-left: 120px;
 }
 
 .p{
   color: #eee;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  display: inline;
-  position: absolute;
-  padding-left: 30px;
-  padding-top: 10px;
-  
+  font-size: 20px;
 }
 
-.p1{
-  color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 30px;
-  white-space: nowrap;
-  font-size: 18px;
-}
-
-.description{
-    flex: 1;
-    padding: 20px 0px 20px 20px;
-}
-
-.btn0{
-    padding: 7px 50px 7px 50px;
-    background: linear-gradient(to right, #1c1c1c, #000000);
-    color: #fff;
+.btn1 {
+    font-size: 16px;
+    text-decoration: none;
+    background-color:  #000;
+    font-weight: 300;
+    padding: 10px 15px 10px 15px;
+    color: #ccc;
+    margin-left: 9.7rem;
     border: none;
-    margin: 9rem 15px 5px 35rem;
-    letter-spacing: 1px;
-    font-size: 15px;
-    border-radius: 7px;
-    
-}
-
-.btnBox {
-  margin-top: 1px;
-}
-
-.btn0:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
-}
-
-.btn1{
-    padding: 7px 40px 7px 40px;
-    background: linear-gradient(to right, #4b4545, #000000);
-    color: #fff;
-    border: none;
-    margin: 10px 40rem 30px 42rem;
-    letter-spacing: 1px;
-    font-size: 15px;
-    border-radius: 10px;
-    
-}
-
-.btn1:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
-}
-
-.footer {
-    background-color: #000;
-    color: #fff;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    width: 100%;
-    margin: 0 0 0 0;
-    padding: 0;
-    
-}.footer .p {
-      color: #fff;
-      text-decoration: none;
-    }
-    @keyframes pop-up {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-up {
-      0% {
-        transform: translateY(-4rem);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    .img{
-padding:25px 30px 30px 30px;
-}
-
-@media only screen and (max-width:600px) {
-  *{
-        margin: 0;
-        padding: 0;
-    }
-    body {
-    background-color: #1a1a1a;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-   width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin-bottom: 2rem;
-}
-
-.logo {
-   padding-top: 23px;
-  font-size: 32px;
-    padding-left: 16px;
-    padding-bottom: 2rem;
-    width: 25%;
-    color: #fff;
+    border-radius: 20px;
     cursor: pointer;
-}
-
-.menu-options {
-  flex: 1;
-  text-align: center;
-  margin-right: 17rem;
-  font-size: 18px;
-}
-
-.menu-options a:hover{
-  transition: all 0.5s;
-        text-decoration: none;
-  text-shadow: 0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 30px #fff,
-               0 0 40px rgb(123, 129, 129),
-               0 0 70px rgb(117, 126, 126),
-               0 0 80px rgb(101, 104, 104),
-               0 0 100px rgb(127, 133, 133),
-               0 0 150px rgb(143, 155, 155);
-  animation: pop-up 1s ease-out forwards;
-  opacity: 0;
-}
-
-.menu-options a {
-  color: #fff;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
-.radiant-text {
-    text-align: center;
-    font-size: 60px;
-    background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 2px;
-    animation: slide-up 1s ease;
-    margin-bottom: 20px;
-    margin-left: 15px; ;
-}
-.container{
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-}
-
-.card{
-    border-radius: 10px;
-    background-color: #292929;
-    width: 900px;
-    height: 210px;
-    display: flex;
-    align-items: center;
-    animation: slide-up 1s ease;
-    margin-bottom: 30px;
-}
-.description{
-  display: block;
-    min-width: 600px;
-    padding: 20px 0px 20px 20px;
-}
-.btnBox {
-  width: 66%;
-  float: right;
-}
-.footer {
-    background-color: #000;
-    color: #fff;
-    font-size: 14px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    width: 104%;
-    margin-top:auto;
-    padding: 0;
-    
-    
-}.footer .p {
-      color: #fff;
-      text-decoration: none;
+    display: block;
     }
 
+.btn1:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+    background-color: #000;
+    border: none;
 }
 
 </style>
 <body>
-    <div class="header">
-        <div class="logo">
-            <h2>
-                <span style="color: #808080;">GECH</span>
-              </h2>
+        <div class="buy-card">
+            <div class="img">
+                <img src="sci calculator 4402.jpeg" width="140px" height="160px" style="border-radius: 10px;"/>
+            </div>
+            <p class="p">Product ID: 2023101</p>
+              <p class="p">Scientific Calculator ES-01</p>
+                <p class="p">Price: 822</p>
+                <button class="btn1">Buy Now</button>
         </div>
-        <div class="menu-options">
-            <a href="#">Home</a>
-            <a href="#">Contact Us</a>
+        <div class="buy-card">
+          <div class="img">
+              <img src="sci calculator 4402.jpeg" width="140px" height="160px" style="border-radius: 10px;"/>
           </div>
-    </div>
-      <h1 class="radiant-text">DEVELOPERS</h1>
-      <div class="container">
-        <div class="card"> 
-            <div class="description">
-                <h2 >NIKHIL GOWDA T P<h2></h2>
-                 <p >batch:2024</p>
-                 <p >Branch:Computer Science & Engineering </p>
-                 <p >Tech Stack used</p>
-                  <p>  Web Framework:Flask
-                    ORM:SQLAlchemy
-                    Database:MySQL
-                    Programming language:Python</p>
-                 
-            </div><button class="btn0">Contact</button>
-        </div>
-        <div class="card"> 
-        <div class="description">
-            <h2 >ANJALI K S<h2></h2>
-             <p >:batch024</p>
-             <p >Branch:Computer Science & Engineering </p>
-             <p>Tech Stack used
-                Markup Language:HTML5
-                StyleSheet:CSS3
-                Database:MySQL
-                Programming language:Python
-                Scripting language:JavaScript
-             </p>
-             <p>Frameworks:React, Flask</p>
-            
-        </div> <div  class="btnBox"><button class="btn0">Contact</button></div>
-    </div>
-        </div>
+          <p class="p">Product ID: 2023101</p>
+            <p class="p">Scientific Calculator ES-01</p>
+              <p class="p">Price: 822</p>
+              <button class="btn1">Buy Now</button>
       </div>
-      <button class="btn1">Add Developer</button>
-      <div class="footer">
-        &copy; 2023 All Rights Reserved
-        </div>
 </body>
+</html>
