@@ -2,89 +2,31 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>buy</title>
+  <title>buy_confirm</title>
 </head>
 <style>
 
-*{
-        margin: 0;
-        padding: 0;
-    }
-    body {
-    background-color: #1a1a1a;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
+body {
+  background-color: #1a1a1a;
+}
+.container{
   width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin-bottom: 2rem;
-}
-
-.logo {
-   padding-top: 23px;
-  font-size: 32px;
-    padding-left: 16px;
-    padding-bottom: 2rem;
-    width: 25%;
-    color: #fff;
-    cursor: pointer;
-}
-
-
-.menu-options {
-  text-align: center;
-  margin-right: 24.5rem;
-  font-size: 18px;
-}
-
-.menu-options a:hover{
-  transition: all 0.5s;
-        text-decoration: none;
-  text-shadow: 0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 30px #fff,
-               0 0 40px rgb(123, 129, 129),
-               0 0 70px rgb(117, 126, 126),
-               0 0 80px rgb(101, 104, 104),
-               0 0 100px rgb(127, 133, 133),
-               0 0 150px rgb(143, 155, 155);
-  animation: pop-up 1s ease-out forwards;
-  opacity: 0;
-}
-
-.menu-options a {
-  color: #fff;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
-.card-container{
   height: 100vh;
-  width: 100%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .buy-card{
-    margin: 35px 50px 35px 50px ;
     border-radius: 10px;
     background-color: #292929;
-    width: 380px;
-    height: 440px;
-    display: inline-block;
+    width: 700px;
+    height: 610px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .buy-card:hover {
@@ -94,8 +36,7 @@
 
 .img{
 padding-top: 50px;
-padding-left: 120px;
-margin-bottom: 30px;
+padding-left: 280px;
 }
 
 .p{
@@ -103,21 +44,21 @@ margin-bottom: 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   font-size: 20px;
-  margin-bottom: 15px;
 }
 
 .btn1 {
     font-size: 16px;
-    text-decoration: none;
     background-color:  #000;
     font-weight: 300;
     padding: 10px 15px 10px 15px;
     color: #ccc;
-    margin-left: 9.4rem;
+    text-align: center;
+    margin-left: 17.5rem;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     display: block;
+    letter-spacing: 1px;
     }
 
 .btn1:hover{
@@ -127,70 +68,146 @@ margin-bottom: 30px;
     border: none;
 }
 
-@keyframes pop-up {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+.form {
+		width: 200px;
+        max-width: 50%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: 9.5rem;
+        
+		}
 
-.footer {
-    background-color: #000;
-    color: #fff;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4rem;
-    width: 104%;
-    margin-top:auto;
-    padding: 0;    
-}
+		.inside{
+		  display: block;
+          font-size: 1rem;
+          font-weight: 200;
+          padding: 0.5rem;
+		  color: #eee;
+		  background-color: #1a1a1a;
+          margin: 1rem auto;
+          width: 190%;
+          border: 1px solid #777;
+          border-radius: 3px;
+          outline: none;
+		  cursor: pointer;
+		}
 
-.footer-p {
+    .popup{
+      width: 500px;
+      background-color: #1a1a1a;
+      border-radius: 6px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%,-50%) scale(0.1);
+      text-align: center;
+      padding: 0 30px 30px;
       color: #fff;
-      text-decoration: none;
+      visibility: hidden;
+      transition: transform 0.4s, top 0.4s;
+    }
+    .popup img{
+      width: 120px;
+      margin-top: -50px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .popup h2{
+      font-size: 38px;
+      font-weight: 500;
+      margin: 30px 0 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .popup button{
+      width: 100%;
+      margin-top: 50px;
+      padding: 10px 0;
+      background: #3a7922;
+      color: #fff;
+      border: 0;
+      outline: none;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .open-popup{
+      visibility: visible;
+      top: 50%;
+      transform: translate(-50%,-50%) scale(1);
+    }
+
+    .close-buy-card{
+  background-color: #1a1a1a;
     }
 
 </style>
-<body>
-  <div class="header">
-    <div class="logo">
-        <h2>
-            G<span style="color: rgb(195, 187, 187);">ECH</span>.
-          </h2>
-    </div>
-    <div class="menu-options">
-        <a href="#">Home</a>
-        <a href="#">Contact Us</a>
-      </div>
-      </div>
-      <div class="card-container">
+<body>\
+    <div class="container">
         <div class="buy-card">
             <div class="img">
                 <img src="sci calculator 4402.jpeg" width="140px" height="160px" style="border-radius: 10px;"/>
             </div>
-            <p class="p">Product ID: 2023101</p>
               <p class="p">Scientific Calculator ES-01</p>
-                <p class="p">Price: 822</p>
-                <button class="btn1">Buy Now</button>
-        </div>
-        <div class="buy-card">
-            <div class="img">
-                <img src="sci calculator 4402.jpeg" width="140px" height="160px" style="border-radius: 10px;"/>
-            </div>
-            <p class="p">Product ID: 2023101</p>
-              <p class="p">Scientific Calculator ES-01</p>
-                <p class="p">Price: 822</p>
-                <button class="btn1">Buy Now</button>
+              <p class="p">Product ID: 2023101 Price: 822</p>
+              <div class="form">
+                <input class="inside"
+                  type="text"
+                  name="s_usn"
+                  placeholder="Student USN"
+                  required
+                />
+              </div>
+              <div class="form">
+                <input class="inside"
+                  type="text"
+                  name="s_name"
+                  placeholder="Student Name"
+                  required
+                />
+              </div>
+              <div class="form">
+                <input class="inside"
+                  type="text"
+                  name="s_sem"
+                  placeholder="Semester"
+                  required
+                />
+              </div>
+              <div class="form">
+                <input class="inside"
+                  type="text"
+                  name="s_branch"
+                  placeholder="Branch"
+                  required
+                />
+              </div>
+                <div><button class="btn1" onclick="openPopup()">Confirm Order</button></div>
+                <div class="popup" id="popup">
+                  <img src="tick.png">
+                  <h2>Thank You!</h2>
+                  <p style="font-size: 20px; letter-spacing: 1px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Your details has been successfully submitted. Thanks!</p>
+                  <button type="button" onclick="closePopup()" id="okButton">OK</button>
+                </div>
         </div>
       </div>
-        <div class="footer">
-          <div class="footer-p">
-          &copy; 2023 All Rights Reserved</div>
-          </div>
-        </body>
+      <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+          popup.classList.remove("buy-card");
+          popup.classList.add("open-popup");
+        }
+        function closePopup(){
+          popup.classList.remove("open-popup");
+        }
+        document.getElementById("okButton").addEventListener("click", function(){
+    window.location.href = "buy.html";
+})
+      </script>
+</body>
 </html>
