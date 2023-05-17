@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>alumni</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+}
+
+.logo {
+   padding-top: 20px;
+  font-size: 32px;
+    padding-left: 12px;
+    padding-bottom: 2rem;
+    width: 25%;
+    color: #fff;
+    cursor: pointer;
+}
+
+nav {
+  flex: 2;
+  
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+nav li {
+  margin: 0 10px;
+  
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.user-options {
+  flex: 1;
+  text-align: right;
+  font-size: 18px;
+}
+
+.user-options a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.user-options a:hover{
+        transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.menu-options {
+  flex: 1;
+  text-align: center;
+  margin-left: 6rem;
+  font-size: 18px;
+}
+
+.menu-options a:hover{
+  transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.menu-options a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.radiant-text {
+    text-align: center;
+    font-size: 60px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    animation: slide-up 1s ease;
+    margin-bottom: 20px;
+}
+.container{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.card{
+    border-radius: 10px;
+    background-color: #292929;
+    width: 1100px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    animation: slide-up 1s ease;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+}
+
+.p{
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  display: inline;
+  position: absolute;
+  padding-left: 30px;
+  padding-top: 10px;
+  
+}
+
+.p1{
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 30px;
+  white-space: nowrap;
+  font-size: 18px;
+}
+
+.description{
+    flex: 1;
+    padding-top: 70px;
+}
+
+.btn0{
+    padding: 7px 50px 7px 50px;
+    background: linear-gradient(to right, #1c1c1c, #000000);
+    color: #fff;
+    border: none;
+    margin: 20px 15px 5px 42rem;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-radius: 7px;
+    
+}
+
+.btn0:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+}
+
+.btn1{
+    padding: 7px 40px 7px 40px;
+    background: linear-gradient(to right, #4b4545, #000000);
+    color: #fff;
+    border: none;
+    margin: 10px 40rem 30px 42rem;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-radius: 10px;
+    
+}
+
+.btn1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    
+}.footer .p {
+      color: #fff;
+      text-decoration: none;
+    }
+    @keyframes pop-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+      0% {
+        transform: translateY(-4rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .img{
+padding:25px 30px 30px 30px;
+
+}
+
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <h2>
+                e<span style="color: #808080;">Buy</span>.
+              </h2>
+        </div>
+        <div class="menu-options">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+          </div>
+        <div class="user-options">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+        </div>
+      </header>
+      <h1 class="radiant-text">ALUMNI</h1>
+      <div class="container">
+        <div class="card">
+            <div class="img">
+                <img src="Picsart_23-02-17_20-36-13-172__01.png" width="140px" height="160px" style="border-radius: 10px;"/>
+                <h2 class="p">NIKHIL GOWDA T P<h2>
+            </div>
+            <div class="description">
+                 <p class="p1">YOP:{{yop}}</p>
+                 <p class="p1">Branch:{{branch}}</p>
+                 <p class="p1">JOB:{{job}}</p>
+                 <button class="btn0">Get Referral</button>
+            </div>
+        </div>
+      </div>
+      <button class="btn1">Add Alumni</button>
+      <div class="footer">
+        &copy; 2023 All Rights Reserved
+        </div>
+</body>
