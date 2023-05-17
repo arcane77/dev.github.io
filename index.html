@@ -17,13 +17,16 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  width: 100%;
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
@@ -31,66 +34,19 @@ header {
 }
 
 .logo {
-   padding-top: 20px;
+   padding-top: 23px;
   font-size: 32px;
-    padding-left: 12px;
+    padding-left: 16px;
     padding-bottom: 2rem;
     width: 25%;
     color: #fff;
     cursor: pointer;
 }
 
-nav {
-  flex: 2;
-  
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}
-
-nav li {
-  margin: 0 10px;
-  
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.user-options {
-  flex: 1;
-  text-align: right;
-  font-size: 18px;
-}
-
-.user-options a {
-  color: #fff;
-  margin-left: 10px;
-  text-decoration: none;
-}
-.user-options a:hover{
-        transition: all 0.5s;
-        text-decoration: none;
-  text-shadow: 0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 30px #fff,
-               0 0 40px rgb(123, 129, 129),
-               0 0 70px rgb(117, 126, 126),
-               0 0 80px rgb(101, 104, 104),
-               0 0 100px rgb(127, 133, 133),
-               0 0 150px rgb(143, 155, 155);
-  animation: pop-up 1s ease-out forwards;
-  opacity: 0;
-}
 
 .menu-options {
-  flex: 1;
   text-align: center;
-  margin-left: 6rem;
+  margin-right: 24.5rem;
   font-size: 18px;
 }
 
@@ -114,7 +70,6 @@ nav a {
   margin-left: 15px;
   text-decoration: none;
 }
-
 .radiant-text {
     text-align: center;
     font-size: 60px;
@@ -137,7 +92,7 @@ nav a {
 .card{
     border-radius: 10px;
     background-color: #292929;
-    width: 1100px;
+    width: 900px;
     height: 210px;
     display: flex;
     align-items: center;
@@ -179,7 +134,7 @@ nav a {
     background: linear-gradient(to right, #1c1c1c, #000000);
     color: #fff;
     border: none;
-    margin: 20px 15px 5px 42rem;
+    margin: 20px 15px 5px 40rem;
     letter-spacing: 1px;
     font-size: 15px;
     border-radius: 7px;
@@ -196,10 +151,13 @@ nav a {
     background: linear-gradient(to right, #4b4545, #000000);
     color: #fff;
     border: none;
-    margin: 10px 40rem 30px 42rem;
+    margin: auto;
     letter-spacing: 1px;
     font-size: 15px;
     border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     
 }
 
@@ -216,11 +174,12 @@ nav a {
     justify-content: center;
     align-items: center;
     height: 4rem;
-    width: 100%;
-    margin: 0 0 0 0;
-    padding: 0;
-    
-}.footer .p {
+    width: 104%;
+    margin-top:auto;
+    padding: 0;    
+}
+
+.footer-p {
       color: #fff;
       text-decoration: none;
     }
@@ -251,21 +210,17 @@ padding:25px 30px 30px 30px;
 
 </style>
 <body>
-    <header>
-        <div class="logo">
-            <h2>
-                e<span style="color: #808080;">Buy</span>.
-              </h2>
-        </div>
-        <div class="menu-options">
-            <a href="#">Home</a>
-            <a href="#">Contact Us</a>
-          </div>
-        <div class="user-options">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
-        </div>
-      </header>
+  <div class="header">
+    <div class="logo">
+        <h2>
+            G<span style="color: rgb(195, 187, 187);">ECH</span>.
+          </h2>
+    </div>
+    <div class="menu-options">
+        <a href="#">Home</a>
+        <a href="#">Contact Us</a>
+      </div>
+      </div>
       <h1 class="radiant-text">ALUMNI</h1>
       <div class="container">
         <div class="card">
@@ -283,6 +238,7 @@ padding:25px 30px 30px 30px;
       </div>
       <button class="btn1">Add Alumni</button>
       <div class="footer">
-        &copy; 2023 All Rights Reserved
+        <div class="footer-p">
+        &copy; 2023 All Rights Reserved</div>
         </div>
 </body>
