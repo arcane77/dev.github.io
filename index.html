@@ -3,11 +3,71 @@
 
 	<title>sell</title>
 	<style>
-		body {
-			background-color: #1a1a1a;
-			color: #fff;
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		}
+*{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+}
+
+.logo {
+   padding-top: 23px;
+  font-size: 32px;
+    padding-left: 16px;
+    padding-bottom: 2rem;
+    width: 25%;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.menu-options {
+  text-align: center;
+  margin-right: 24.5rem;
+  font-size: 18px;
+}
+
+.menu-options a:hover{
+  transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.menu-options a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
 
 		.container {
    		 display: flex;
@@ -145,10 +205,38 @@ input[type="text"] {
         transform: scale(1.1);
       }
 
+      .footer {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 104%;
+    margin-top:auto;
+    padding: 0;    
+}
+
+.footer-p {
+      color: #fff;
+      text-decoration: none;
+    }
+
     </style>
     <body>
+      <div class="header">
+        <div class="logo">
+            <h2>
+                G<span style="color: rgb(195, 187, 187);">ECH</span>.
+              </h2>
+        </div>
+        <div class="menu-options">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+          </div>
+          </div>
       <h1 class="radiant-text"> SELL</h1>
-    </body>
 	<div class="container">
 	   <div class="form">
         <label style="margin-right: 63px ;">Product Name:</label>
@@ -186,9 +274,14 @@ input[type="text"] {
                 name="image"
                 required
               />
-              <button class="btn1" style="margin-left: 10rem;">Upload Product</button>
+              <button class="btn1" style="margin-left: 15rem;">Upload Product</button>
 			</div>
 		</div>
 	</div>
 	<div>
 </div>
+<div class="footer">
+  <div class="footer-p">
+  &copy; 2023 All Rights Reserved</div>
+  </div>
+</body>
