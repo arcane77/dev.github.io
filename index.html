@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>alumni</title>
+  <title>home</title>
 </head>
 <style>
     *{
@@ -46,7 +46,7 @@
 
 .menu-options {
   text-align: center;
-  margin-right: 24.5rem;
+  margin-left: 10rem;
   font-size: 18px;
 }
 
@@ -70,34 +70,92 @@
   margin-left: 15px;
   text-decoration: none;
 }
-.radiant-text {
-    text-align: center;
-    font-size: 60px;
-    background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 2px;
-    animation: slide-up 1s ease;
-    margin-bottom: 20px;
+
+.user-options {
+  flex: 1;
+  text-align: right;
+  font-size: 18px;
 }
-.container{
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+
+.user-options a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.user-options a:hover{
+        transition: all 0.5s;
+        text-decoration: none;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px rgb(123, 129, 129),
+               0 0 70px rgb(117, 126, 126),
+               0 0 80px rgb(101, 104, 104),
+               0 0 100px rgb(127, 133, 133),
+               0 0 150px rgb(143, 155, 155);
+  animation: pop-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.icon{
+  display: inline-block;
 
 }
 
-.card{
+@keyframes slide-up {
+      0% {
+        transform: translateY(-4rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pop-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    height: 600px;
+    margin: 1.5rem 4.5rem 2.5rem 4.5rem;
+    padding: 20px 20px 20px 20px;
+    background-color: #1a1a1a;
     border-radius: 10px;
-    background-color: #292929;
-    width: 900px;
-    height: 210px;
-    display: flex;
-    align-items: center;
     animation: slide-up 1s ease;
-    margin-bottom: 30px;
+    box-shadow:  2.5px 1.2px 2.2px rgba(0, 0, 0, 0.188),
+    6.1px 3px 5.3px rgba(0, 0, 0, 0.24),
+    11.5px 5.6px 10px rgba(0, 0, 0, 0.279),
+    20.5px 10.1px 17.9px rgba(0, 0, 0, 0.314),
+    38.4px 18.8px 33.4px rgba(0, 0, 0, 0.347),
+    92px 45px 80px rgba(0, 0, 0, 0.38);
+}
+
+.card {
+    background-color: #292929;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
 .card:hover {
@@ -105,66 +163,43 @@
     box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
 }
 
-.p{
-  color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  display: inline;
-  position: absolute;
-  padding-left: 30px;
-  padding-top: 10px;
-  margin-bottom: 20px;
-  
-}
-
-.p1{
-  color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 22px;
-  white-space: nowrap;
-  font-size: 18px;
-}
-
-.description{
-    flex: 1;
-    padding-top: 70px;
-}
-
-.btn0{
-    padding: 7px 50px 7px 50px;
-    background: linear-gradient(to right, #1c1c1c, #000000);
+.card h3 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
     color: #fff;
-    border: none;
-    margin: 20px 15px 40px 30rem;
-    letter-spacing: 1px;
-    font-size: 15px;
-    border-radius: 7px;
-    
-}
-
-.btn0:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
-}
-
-.btn1{
-    padding: 7px 40px 7px 40px;
-    background: linear-gradient(to right, #4b4545, #000000);
-    color: #fff;
-    border: none;
-    margin: 1rem auto;
-    letter-spacing: 1px;
-    font-size: 15px;
-    border-radius: 10px;
-    align-items: center;
     text-align: center;
-    justify-content: center;
-    
 }
 
-.btn1:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 0px 10px rgba(246, 244, 247, 0.971);
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.card a {
+    color: #fff;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+}
+.radiant-text {
+    text-align: center;
+    font-size: 50px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-left: 25px; 
+    animation: slide-up 1s ease;
 }
 
 .footer {
@@ -177,69 +212,71 @@
     height: 4rem;
     width: 104%;
     margin-top:auto;
-    padding: 0;    
-}
-
-.footer-p {
+    padding: 0;
+    
+}.footer .p {
       color: #fff;
       text-decoration: none;
     }
-    @keyframes pop-up {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-up {
-      0% {
-        transform: translateY(-4rem);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    .img{
-padding:25px 30px 30px 30px;
-
-}
-
 
 </style>
 <body>
-  <div class="header">
-    <div class="logo">
-        <h2>
-            G<span style="color: rgb(195, 187, 187);">ECH</span>.
-          </h2>
+    <div class="header">
+        <div class="logo">
+            <h2>
+                G<span style="color: rgb(195, 187, 187);">ECH</span>.
+              </h2>
+        </div>
+        <div class="menu-options">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <div class="user-options">
+            <a href="{{ url_for('developers') }}">Developers</a>
+          </div>
+          <div class="icon">
+            <img style="padding:5px 0 0 5px; " src="./static/images/icons8-source-code-24.png"/>
+          </div>
+      </div>
+      
+    <h1 class="radiant-text">COMMUNITY</h1>
+ 
+  <class class="container">
+      <div class="card">
+        <a  href="/buy">Buy</a>
+          <p>students can buy study materials from other students</p>
+      </div>
+      <div class="card">
+        <a  href="/sell">Sell</a>
+          <p>students can sell their study materials to other students</p>
+      </div>
+      <div class="card">
+        <a  href="/cgpa">CGPA calculator</a>
+          <p>calculate your CGPA</p>
+      </div>
+      <div class="card">
+        <a  href="/sgpa">SGPA calculator</a>
+          <p>calculate your semester SGPA</p>
+      </div>
+      <div class="card">
+        <a  href="/events">Events</a>
+          <p>participate in college events/fests</p>
+      </div>
+      <div class="card">
+        <a  href="/club">Clubs</a>
+          <p>enroll to college clubs</p>
+      </div>
+      <div class="card">
+        <a  href="/chatroom">Chatroom</a>
+        <p>annonymous chatroom</p>
     </div>
-    <div class="menu-options">
-        <a href="#">Home</a>
-        <a href="#">Contact Us</a>
-      </div>
-      </div>
-      <h1 class="radiant-text">ALUMNI</h1>
-      <div class="container">
-        <div class="card">
-            <div class="img">
-                <img src="Picsart_23-02-17_20-36-13-172__01.png" width="140px" height="160px" style="border-radius: 10px;"/>
-                <h2 class="p">NIKHIL GOWDA T P<h2>
-            </div>
-            <div class="description">
-                 <p class="p1">YOP:{{yop}}</p>
-                 <p class="p1">Branch:{{branch}}</p>
-                 <p class="p1">JOB:{{job}}</p>
-                 <button class="btn0">Get Referral</button>
-            </div>
-        </div>
-      </div>
-      <button class="btn1">Add Alumni</button>
-      <div class="footer">
-        <div class="footer-p">
-        &copy; 2023 All Rights Reserved</div>
-        </div>
-</body>
+    <div class="card">
+      <a  href="/alumni">Alumni</a>
+      <p>get in touch with college alumni</p>
+  </div>
+
+  </class>
+  <div class="footer">
+    &copy; 2023 All Rights Reserved
+    </div>
+  </body>
